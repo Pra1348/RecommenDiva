@@ -1,0 +1,229 @@
+﻿@page
+@model RecommenDiva.Pages.Contact.ContactModel
+@{
+    ViewData["Title"] = "Contact";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Contact page for RecommenDiva." />
+    <meta name="keywords" content="RecommenDiva, contact, form" />
+    <title>@ViewData["Title"] - RecommenDiva</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        header {
+            background: rgba(0, 0, 0, 0.9);
+            padding: 10px 0;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        header nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        header nav ul li {
+            margin: 0 15px;
+        }
+
+        header nav ul li a {
+            text-decoration: none;
+            color: #ffffff;
+            padding: 10px 20px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        header nav ul li a:hover {
+            background-color: #ff4081;
+            border-radius: 5px;
+            transform: scale(1.1);
+        }
+
+        main {
+            text-align: center;
+            padding: 120px 20px 50px;
+            position: relative;
+        }
+
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+        }
+
+        form div {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+
+        form label {
+            display: inline-block;
+            width: 150px;
+            text-align: right;
+            margin-right: 10px;
+            color: #ff4081;
+        }
+
+        form input, form select, form textarea {
+            width: 250px;
+            padding: 8px;
+            border: 1px solid #ff4081;
+            border-radius: 4px;
+            background-color: rgba(255, 255, 255, 0.2);
+            color: #ffffff;
+        }
+
+        form button {
+            margin-right: 10px;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            background-color: #ff4081;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        form button:hover {
+            background-color: #e60073;
+            transform: scale(1.1);
+        }
+
+        .footer {
+            margin-top: 20px;
+            padding: 10px 0;
+            background: rgba(0, 0, 0, 0.9);
+            border-top: 1px solid #e4e4e4;
+            text-align: center;
+        }
+
+        .footer a {
+            color: #ff4081;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        .success-image {
+            width: 100px;
+            height: 100px;
+            margin-bottom: 20px;
+        }
+
+        .additional-button {
+            background-color: #008CBA;
+        }
+
+        .additional-button:hover {
+            background-color: #007BB5;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="About.html">About</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+                <li><a href="privacy.html">Privacy Policy</a></li>
+                <li><a href="Terms.html">Terms of Service</a></li>
+                <li><a href="BestSellingProducts.html">Best Selling Products</a></li>
+                <li><a href="CollaborativeFiltering.html">Collaborative Filtering</a></li>
+                <li><a href="ContentBasedFiltering.html">Content-Based Filtering</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main role="main" class="container pb-3">
+        <h1>Contact Us</h1>
+        <p>Please fill out the form below to get in touch with us.</p>
+        <form method="post" action="/Contact">
+            <div>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required />
+            </div>
+            <div>
+                <label for="phone">Phone No.:</label>
+                <input type="tel" id="phone" name="phone" required />
+            </div>
+            <div>
+                <label for="gender">Gender:</label>
+                <select id="gender" name="gender" required>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            <div>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required />
+            </div>
+            <div>
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" name="dob" required />
+            </div>
+            <div>
+                <label for="terms">
+                    <input type="checkbox" id="terms" name="terms" required />
+                    I agree to the terms and conditions
+                </label>
+            </div>
+            <div>
+                <label for="address">Address:</label>
+                <textarea id="address" name="address" required></textarea>
+            </div>
+            <div>
+                <label for="categories">Categories:</label>
+                <select id="categories" name="categories" required>
+                    <option value="fashion">Fashion &amp; Apparel</option>
+                    <option value="beauty">Beauty &amp; Personal Care</option>
+                    <option value="luxury">Luxury &amp; Lifestyle</option>
+                    <option value="jewelry">Jewelry &amp; Watches</option>
+                    <option value="gifts">Gifts &amp; Specialty Items</option>
+                </select>
+            </div>
+            <div>
+                <label for="country">Country:</label>
+                <select id="country" name="country" required>
+                    <option value="india" selected>India</option>
+                    <!-- Add other countries as needed -->
+                </select>
+            </div>
+            <div>
+                <button type="submit" class="additional-button" onclick="window.location.href='Success.html'">Submit</button>
+                <button type="reset" >Reset</button>
+                <button type="button" class="additional-button" onclick="window.location.href='Terms.html'">Terms & Conditions</button>
+            </div>
+        </form>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            &copy; 2024 - RecommenDiva - <a href="privacy.html">Privacy</a>
+        </div>
+
+    </footer>
+</body>
+</html>

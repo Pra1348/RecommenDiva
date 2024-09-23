@@ -1,0 +1,192 @@
+﻿@page
+@{
+    Layout = "_Layout";
+    ViewData["Title"] = "Home Page";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Welcome to RecommenDiva, your go-to platform for personalized recommendations." />
+    <meta name="keywords" content="RecommenDiva, personalized recommendations, best products" />
+    <title>@ViewData["Title"] - RecommenDiva</title>
+    <link rel="stylesheet" href='style.css' />
+    <style>
+        /* Internal CSS */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+        header {
+            background-color: #1f1f1f;
+            padding: 10px 0;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+        }
+        header nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+        header nav ul li {
+            margin: 0 15px;
+        }
+        header nav ul li a {
+            text-decoration: none;
+            color: #ffffff;
+            padding: 10px 20px;
+            transition: background-color 0.3s;
+        }
+        header nav ul li a:hover {
+            background-color: #333333;
+            border-radius: 5px;
+        }
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 70px 20px 20px;
+            background-color: #1a1a1a;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        .container p {
+            line-height: 1.6;
+        }
+        .moving-items {
+            display: flex;
+            justify-content: space-around;
+            padding: 20px 0;
+            overflow: hidden;
+        }
+        .moving-item {
+            width: 200px;
+            height: 200px;
+            background-color: #292929;
+            margin: 0 10px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: move 10s linear infinite;
+        }
+        @keyframes move {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(100%); }
+        }
+        .footer {
+            background-color: #1f1f1f;
+            padding: 10px 0;
+            box-shadow: 0 -1px 10px rgba(0, 0, 0, 0.5);
+            text-align: center;
+        }
+        .footer a {
+            color: #ffffff;
+            text-decoration: none;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+        .scrollable-content {
+            max-height: 300px;
+            overflow-y: auto;
+            margin: 20px 0;
+        }
+        .project-link {
+            display: inline-block;
+            margin: 20px 0;
+            padding: 10px 20px;
+            background-color: #333333;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .project-link:hover {
+            background-color: #555555;
+        }
+        figure {
+            position: relative;
+        }
+        figure .image {
+            width: 100%;
+            height: 300px;
+            background-size: cover;
+            background-position: center;
+            border-radius: 8px;
+        }
+        figcaption {
+            text-align: center;
+            margin-top: 10px;
+            color: #b0b0b0;
+        }
+        .img-fluid {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+                <li><a href="privacy.html">Privacy Policy</a></li>
+                <li><a href="Terms.html">Terms of Service</a></li>
+                <li><a href="BestSellingProducts.html">Best Selling Products</a></li>
+                <li><a href="/Recommendations/CollaborativeFiltering">Collaborative Filtering</a></li>
+                <li><a href="/Recommendations/ContentBasedFiltering">Content-Based Filtering</a></li>
+                <li><a href="/Recommendations/CustomerDemographics">Customer Demographics</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="container">
+        <h1>Welcome to RecommenDiva</h1>
+        <section>
+            <p>Discover personalized recommendations for fashion, beauty, luxury, and more!</p>
+            <figure>
+                <img src="Firefly AI-Driven E-commerce Recommendation System specifically for fashion named as RecommenDiva_Ob (1).jpg" alt="RecommenDiva Banner" class="img-fluid mb-3" />
+                <figcaption>RecommenDiva - Personalized Recommendations</figcaption>
+            </figure>
+        </section>
+        <div class="moving-items">
+            <div class="moving-item">AI</div>
+            <div class="moving-item">Fashion</div>
+            <div class="moving-item">Beauty</div>
+            <div class="moving-item">Luxury</div>
+        </div>
+        <div class="scrollable-content">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum. Cras venenatis euismod malesuada. Nullam ac magna ac justo pharetra pellentesque. Fusce laoreet nulla vel turpis suscipit, nec commodo augue condimentum. Quisque non libero ut turpis convallis convallis. Mauris et ligula consequat, scelerisque leo a, tincidunt risus. Curabitur ultricies enim vel nulla sollicitudin, non venenatis nunc bibendum.</p>
+            <p>Curabitur tincidunt mi sed quam aliquet, in mollis elit tempus. Cras at feugiat nulla. Praesent pulvinar, quam sit amet pellentesque luctus, eros dolor tincidunt turpis, a pellentesque felis lorem at leo. Proin a ante eget justo fermentum mollis sit amet vel tortor. Aenean ut ipsum ultricies, hendrerit metus at, venenatis ex. Integer consequat malesuada libero, in tincidunt lorem cursus non. Etiam blandit nunc vel metus fermentum, quis consectetur quam suscipit.</p>
+            <p>Etiam eget lacus in nisi accumsan egestas. Nulla convallis vestibulum neque et pharetra. Praesent vehicula tortor vitae neque convallis, et sodales sem ullamcorper. Mauris ut orci eget dui elementum ultrices. Maecenas tincidunt orci quis metus dictum, ut venenatis nulla fermentum. Sed eu odio fermentum, volutpat mi non, aliquet arcu. Donec sed nisl consectetur, suscipit magna vel, laoreet nulla. Fusce euismod semper quam, nec egestas eros consectetur in.</p>
+        </div>
+        <a href="/Projects" class="project-link">Click Me</a>
+    </main>
+    <footer class="footer">
+        <p>&copy; 2024 RecommenDiva - <a href="/Privacy">Privacy</a></p>
+    </footer>
+</body>
+</html>
+
+
+
+<div class="text-center">
+    <h1 class="display-4">Welcome to RecommenDiva</h1>
+    <p>Get the best product recommendations here!</p>
+    <figure class="floating">
+        <img src="/images/home_page_banner.png" alt="Home Page Banner" class="img-fluid mb-3" />
+        <figcaption>Discover personalized recommendations on RecommenDiva</figcaption>
+    </figure>
+    <a href="/Projects" class="button-link">Click me</a>
+</div>

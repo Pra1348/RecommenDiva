@@ -1,0 +1,87 @@
+@page
+@model RecommenDiva.Pages.About.IndexModel
+@{
+    ViewData["Title"] = "About";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Learn more about RecommenDiva, our mission, and our team." />
+    <meta name="keywords" content="About RecommenDiva, personalized recommendations, AI recommendations, product recommendations, fashion, beauty, luxury, lifestyle" />
+    <title>@ViewData["Title"] - RecommenDiva</title>
+    <link rel="stylesheet" href="RecommenDiva\wwwroot\css\swagger-custom.css" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        header nav ul li {
+            display: inline;
+            margin-right: 10px;
+        }
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+        }
+        .team-list li {
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container">
+                <a class="navbar-brand" asp-area="" asp-page="/Index">RecommenDiva</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Index">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-page="/About">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Contact">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main role="main" class="container pb-3">
+        <h1>About</h1>
+        <figure>
+            <img src="~/images/about-us.jpg" alt="About RecommenDiva" class="img-fluid mb-3" />
+            <figcaption>About RecommenDiva</figcaption>
+        </figure>
+        <p>Welcome to RecommenDiva! We are dedicated to providing personalized recommendations for all your fashion, beauty, luxury, and lifestyle needs. Our mission is to bring you the best products tailored to your preferences.</p>
+
+        <section>
+            <h2>Our Mission</h2>
+            <p>We aim to...</p>
+        </section>
+
+        <section>
+            <h2>Our Team</h2>
+            <ul class="team-list">
+                <li><strong>CEO:</strong> Jane Doe</li>
+                <li><strong>CTO:</strong> John Smith</li>
+                <li><strong>Head of Marketing:</strong> Sarah Lee</li>
+                <!-- Add more team members as needed -->
+            </ul>
+        </section>
+    </main>
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2024 - RecommenDiva - <a asp-area="" asp-page="/Privacy">Privacy</a>
+        </div>
+    </footer>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

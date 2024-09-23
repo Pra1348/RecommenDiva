@@ -1,0 +1,238 @@
+﻿@page
+@model RecommenDiva.Pages.Recommendations.HybridFilteringModel
+@{
+    ViewData["Title"] = "Hybrid Filtering";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Information about hybrid filtering on RecommenDiva." />
+    <meta name="keywords" content="RecommenDiva, hybrid filtering, personalized recommendations" />
+    <title>@ViewData["Title"] - RecommenDiva</title>
+    <link rel="stylesheet" href="stylecss" />
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #121212;
+            background-image: url('~/images/space-bg.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 15px 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        header nav ul li {
+            margin: 0 20px;
+        }
+
+        header nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            padding: 10px 20px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        header nav ul li a:hover {
+            background-color: #ff4081;
+            color: #121212;
+            border-radius: 5px;
+        }
+
+        main {
+            text-align: center;
+            padding: 120px 20px 80px 20px;
+            margin: 0 auto;
+            max-width: 960px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            overflow: auto;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        main h1 {
+            font-size: 3em;
+            color: #ff4081;
+            margin-bottom: 20px;
+            animation: colorChange 3s linear infinite;
+        }
+
+        main h2 {
+            font-size: 2em;
+            color: #4caf50;
+            margin-bottom: 10px;
+        }
+
+        main p {
+            font-size: 1.2em;
+            color: #fff;
+            margin-bottom: 30px;
+        }
+
+        footer {
+            background-color: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        .click-me {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 20px;
+            border: 2px solid #ff4081;
+            border-radius: 5px;
+            color: #ff4081;
+            background-color: transparent;
+            text-decoration: none;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .click-me:hover {
+            background-color: #ff4081;
+            color: #121212;
+        }
+
+        .moving-item {
+            width: 50px;
+            height: 50px;
+            background-color: #ff4081;
+            border-radius: 50%;
+            position: absolute;
+            animation: move 5s linear infinite;
+        }
+
+        @keyframes move {
+            0% {
+                top: 0;
+                left: 0;
+            }
+            25% {
+                top: 0;
+                left: 100%;
+            }
+            50% {
+                top: 100%;
+                left: 100%;
+            }
+            75% {
+                top: 100%;
+                left: 0;
+            }
+            100% {
+                top: 0;
+                left: 0;
+            }
+        }
+
+        @keyframes colorChange {
+            0% {
+                color: #ff4081;
+            }
+            50% {
+                color: #4caf50;
+            }
+            100% {
+                color: #ff4081;
+            }
+        }
+
+        @media (max-width: 768px) {
+            header nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            header nav ul li {
+                margin: 10px 0;
+            }
+
+            main {
+                padding: 100px 20px;
+            }
+        }
+
+        .hero-image {
+            position: relative;
+            text-align: center;
+            color: white;
+            height: 60vh;
+            background: url('~/images/space-bg.jpg') no-repeat center center/cover;
+        }
+
+        .hero-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-shadow: 2px 2px 4px #000000;
+        }
+
+        .hero-text h1 {
+            font-size: 4em;
+            color: #ff4081;
+            animation: colorChange 3s linear infinite;
+        }
+
+        .hero-text p {
+            font-size: 1.5em;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+                <li><a href="privacy.html">Privacy Policy</a></li>
+                <li><a href="Terms.html">Terms of Service</a></li>
+                <li><a href="BestSellingProducts.html">Best Selling Products</a></li>
+                <li><a href="/Recommendations/CollaborativeFiltering">Collaborative Filtering</a></li>
+                <li><a href="/Recommendations/ContentBasedFiltering">Content-Based Filtering</a></li>
+                <!-- Add more links as needed -->
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="hero-image">
+            <div class="hero-text">
+                <h1>Hybrid Filtering</h1>
+                <p>Combining the best of collaborative and content-based filtering for superior recommendations.</p>
+            </div>
+        </div>
+        <p>Information about hybrid filtering...</p>
+        <a href="https://yourprojectsurl.com" class="click-me">Learn More</a>
+        <div class="moving-item"></div>
+    </main>
+    <footer>
+        <p>&copy; 2024 RecommenDiva</p>
+    </footer>
+</body>
+</html>

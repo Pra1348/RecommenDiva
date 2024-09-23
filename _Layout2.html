@@ -1,0 +1,268 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Welcome to RecommenDiva, your go-to platform for personalized recommendations." />
+    <meta name="keywords" content="RecommenDiva, personalized recommendations, best products" />
+    <title>@ViewData["Title"] - RecommenDiva</title>
+    <link rel="stylesheet" href='style.css' />
+    <style>
+        body {
+            background-color: #1a1a1a;
+            color: #e0e0e0;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: #333;
+            padding: 10px 0;
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        nav ul li {
+            float: left;
+            margin-right: 20px;
+        }
+        nav ul li a {
+            display: block;
+            color: #e0e0e0;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+        nav ul li a:hover {
+            background-color: #575757;
+        }
+        main {
+            padding: 20px;
+            margin: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+        }
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background: #333;
+            color: #e0e0e0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .scrollable {
+            max-height: 400px;
+            overflow-y: scroll;
+            scrollbar-color: #888 #333;
+            scrollbar-width: thin;
+        }
+        .moving-items {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 20px;
+            animation: move 10s linear infinite;
+        }
+        .moving-items div {
+            background-color: #444;
+            border-radius: 10px;
+            padding: 20px;
+            width: 150px;
+            text-align: center;
+            color: #fff;
+            transition: background-color 0.3s;
+        }
+        .moving-items div:hover {
+            background-color: #575757;
+        }
+        @keyframes move {
+            0% { transform: translateX(0); }
+            50% { transform: translateX(100px); }
+            100% { transform: translateX(0); }
+        }
+        .link-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #444;
+            color: #e0e0e0;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .link-button:hover {
+            background-color: #575757;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            border: 2px solid #575757;
+            margin-bottom: 10px;
+        }
+        figure {
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        figcaption {
+            color: #bbb;
+            font-size: 0.9em;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+                <li><a href="privacy.html">Privacy Policy</a></li>
+                <li><a href="Terms.html">Terms of Service</a></li>
+                <li><a href="BestSellingProducts.html">Best Selling Products</a></li>
+                <li><a href="/Recommendations/CollaborativeFiltering">Collaborative Filtering</a></li>
+                <li><a href="/Recommendations/ContentBasedFiltering">Content-Based Filtering</a></li>
+                <li><a href="/Recommendations/CustomerDemographics">Customer Demographics</a></li>
+                <li><a href="/Recommendations/UpsellingCrossSelling">Upselling and Cross-Selling</a></li>
+                <li><a href="/Recommendations/UserFeedback">User Feedback</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Welcome to RecommenDiva</h1>
+        <section>
+            <p>Discover personalized recommendations for fashion, beauty, luxury, and more!</p>
+            <figure>
+                <img src='RecommenDiva\wwwroot\images\product1.gif' alt="RecommenDiva Banner" class="img-fluid mb-3" />
+                <figcaption>RecommenDiva - Personalized Recommendations</figcaption>
+            </figure>
+        </section>
+        <section class="additional-content">
+            <h2>Why Choose Us?</h2>
+            <p>At RecommenDiva, we believe in providing personalized recommendations tailored to your needs.</p>
+            <ul>
+                <li>Fashion & Apparel</li>
+                <li>Beauty & Personal Care</li>
+                <li>Luxury & Lifestyle</li>
+                <li>Jewelry & Watches</li>
+                <li>Gifts & Specialty Items</li>
+            </ul>
+        </section>
+        <div class="moving-items">
+            <div>Fashion</div>
+            <div>Beauty</div>
+            <div>Luxury</div>
+        </div>
+        <a href="https://github.com/yourusername/yourproject" target="_blank" class="link-button">Click me</a>
+        <a href="https://github.com/yourusername/yourproject" target="_blank" class="link-button">Click me</a>
+        <a href="https://github.com/yourusername/yourproject" target="_blank" class="link-button">Click me</a>
+        <a href="https://github.com/yourusername/yourproject" target="_blank" class="link-button">Click me</a>
+        <a href="https://github.com/yourusername/yourproject" target="_blank" class="link-button">Click me</a>
+    </main>
+    <footer>
+        <p>&copy; 2024 RecommenDiva</p>
+    </footer>
+</body>
+</html>
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="RecommenDiva is a leading platform for personalized product recommendations." />
+    <meta name="keywords" content="RecommenDiva, personalized recommendations, AI recommendations, product recommendations, fashion, beauty, luxury, lifestyle" />
+    <title>@ViewData["Title"] - RecommenDiva</title>
+    <link rel="stylesheet" href='style.css' />
+    <style>
+        /* Internal CSS */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(to bottom, #1a2a6c, #b21f1f, #fdbb2d);
+            color: white;
+            overflow-x: hidden;
+        }
+        .navbar {
+            background: rgba(0, 0, 0, 0.8);
+            border-bottom: 1px solid #ff4081;
+        }
+        .navbar-brand, .nav-link {
+            color: #ff4081 !important;
+        }
+        .footer {
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 1em;
+            color: #ff4081;
+            text-align: center;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            color: #ff4081;
+        }
+        .content {
+            padding: 2em;
+            margin: 0 auto;
+            max-width: 1200px;
+        }
+        .button-link {
+            display: inline-block;
+            background: #ff4081;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            text-decoration: none;
+            transition: background 0.3s ease-in-out;
+        }
+        .button-link:hover {
+            background: #e60073;
+        }
+        /* Animation */
+        .floating {
+            animation: float 3s ease-in-out infinite;
+        }
+        @keyframes float {
+            0% { transform: translatey(0px); }
+            50% { transform: translatey(-20px); }
+            100% { transform: translatey(0px); }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm">
+            <div class="container">
+                <a class="navbar-brand" asp-area="" asp-page="/Index">RecommenDiva</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item"><a class="nav-link" asp-area="" asp-page="/Index">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" asp-area="" asp-page="/About">About</a></li>
+                        <li class="nav-item"><a class="nav-link" asp-area="" asp-page="/Contact">Contact</a></li>
+                        <li class="nav-item"><a class="nav-link" asp-area="" asp-page="/Privacy">Privacy</a></li>
+                        <li class="nav-item"><a class="nav-link" asp-area="" asp-page="/Terms">Terms</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="content">
+        <main role="main" class="pb-3">
+        </main>
+    </div>
+    <footer class="footer">
+        <div class="container">
+            &copy; 2024 - RecommenDiva - <a asp-area="" asp-page="privacy.html" class="text-light">Privacy</a>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,490 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn more about RecommenDiva, our mission, and our team.">
+    <meta name="keywords" content="Best Selling Products of RecommenDiva, personalized recommendations, AI recommendations, product recommendations, fashion, beauty, luxury, lifestyle">
+    <meta name="google-adsense-account" content="ca-pub-4029892796199286">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Best Selling Products of RecommenDiva">
+    <meta property="og:description" content="Learn more about RecommenDiva, our mission, and our team.">
+    <meta property="og:image" content="Firefly Fashion Artificial Intelligence in the RecommenDiva project harnesses sophisticated algorith.jpg">
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="Best Selling Products of RecommenDiva">
+    <meta property="twitter:description" content="Learn more about RecommenDiva, our mission, and our team.">
+    <meta property="twitter:image" content="Firefly Fashion Artificial Intelligence in the RecommenDiva project harnesses sophisticated algorith.jpg">
+    <meta name="generator" content="Webflow">
+    <title>Best Selling Products of RecommenDiva</title>
+    <!-- Linking Stylesheets -->
+    <link rel="stylesheet" href="style.css">
+    
+    
+    <!-- Favicon and Apple Icon -->
+    <link href="android-chrome-192x192.png" rel="shortcut icon" type="image/x-icon">
+    <link href="android-chrome-192x192.png" rel="apple-touch-icon">
+
+    <!-- Google Analytics -->
+    
+    <script type="text/javascript">
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+      gtag('config', 'G-GB7CPCZJVN');
+    </script>
+
+    <!-- GSAP and Lenis -->
+    
+    <script>
+      const lenis = new Lenis({
+        duration: 1.2,
+        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+        direction: 'vertical',
+        gestureDirection: 'vertical',
+        smooth: true,
+        mouseMultiplier: 1,
+        smoothTouch: false,
+        touchMultiplier: 2,
+        infinite: false,
+      });
+      function raf(time) {
+        lenis.raf(time);
+        requestAnimationFrame(raf);
+      }
+      requestAnimationFrame(raf);
+    </script>
+    <style>
+        /* Base and Utility Styles */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #08ed91;
+            background-image: url('Untitled.png');
+            background-size: cover;
+            background-attachment: fixed;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Header and Navigation */
+        header {
+            background-color: rgba(254, 10, 120, 0.8);
+            padding: 15px 0;
+            box-shadow: 0 2px 4px rgba(5, 239, 216, 0.899);
+        }
+
+        header nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        header nav ul li {
+            margin: 0 20px;
+        }
+
+        header nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            padding: 10px 20px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        header nav ul li a:hover {
+            background-color: #ff4081;
+            color: #6616e7;
+            border-radius: 5px;
+        }
+
+        /* Main Content */
+        main {
+            text-align: center;
+            padding: 80px 20px;
+            margin: 0 auto;
+            max-width: 960px;
+            background-color: rgba(159, 243, 14, 0.919);
+            border-radius: 10px;
+            overflow: auto;
+        }
+
+        main h1 {
+            font-size: 3em;
+            color: #ff4081;
+            margin-bottom: 20px;
+        }
+
+        main p {
+            font-size: 1.2em;
+            color: #fff;
+        }
+
+        /* Cards */
+        .card {
+            background-color: rgba(234, 12, 12, 0.799);
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .card img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .card h2 {
+            color: #ff4081;
+            margin-top: 10px;
+        }
+
+        .card p {
+            color: #fff;
+            margin: 10px 0;
+        }
+
+        /* Footer */
+        footer {
+            background-color: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        /* Button */
+        .click-me {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 20px;
+            border: 2px solid #ff4081;
+            border-radius: 5px;
+            color: #ff4081;
+            background-color: transparent;
+            text-decoration: none;
+            transition: background-color 0.3s, color 0.3s, transform 0.3s;
+            cursor: pointer;
+        }
+
+        .click-me:hover {
+            background-color: #ff4081;
+            color: #121212;
+            transform: scale(1.1);
+        }
+
+        /* Moving Item Animation */
+        .moving-item {
+            width: 50px;
+            height: 50px;
+            background-color: #ff4081;
+            border-radius: 50%;
+            position: absolute;
+            animation: move 5s linear infinite;
+        }
+
+        @keyframes move {
+            0% {
+                top: 0;
+                left: 0;
+            }
+            25% {
+                top: 0;
+                left: 100%;
+            }
+            50% {
+                top: 100%;
+                left: 100%;
+            }
+            75% {
+                top: 100%;
+                left: 0;
+            }
+            100% {
+                top: 0;
+                left: 0;
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header nav ul {
+                flex-direction: column;
+            }
+
+            header nav ul li {
+                margin: 10px 0;
+            }
+
+            main {
+                padding: 40px 10px;
+            }
+        }
+
+        /* Flexbox and Grid Layouts */
+        .flex-container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        /* Nested Tags and Advanced Selectors */
+        .nested-parent .nested-child {
+            color: #ff4081;
+        }
+
+        /* Pseudo-classes and Pseudo-elements */
+        a:hover {
+            color: #ff4081;
+        }
+
+        a:visited {
+            color: #a0a0a0;
+        }
+
+        a::before {
+            content: "🔗 ";
+        }
+
+        .special:hover::after {
+            content: " 👈";
+        }
+
+        p {
+            animation-duration: 3s;
+            animation-name: slidein;
+            }
+
+
+        /* Animation Properties */
+        .progress-bar {
+            width: 100%;
+            background-color: #ddd;
+        }
+
+        .progress-bar div {
+            height: 24px;
+            width: 0;
+            background-color: #ff4081;
+            text-align: center;
+            line-height: 24px;
+            color: white;
+            animation: load 2s ease-in-out forwards;
+        }
+
+        @keyframes load {
+            0% { width: 0; }
+            100% { width: 100%; }
+        }
+
+        /* Utility Classes */
+        .mt-20 {
+            margin-top: 20px;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .bg-light {
+            background-color: rgba(240, 9, 29, 0.901);
+        }
+
+        @keyframes slidein {
+        from {
+            translate: 150vw 0;
+            scale: 200% 1;
+        }
+
+        to {
+            translate: 0 0;
+            scale: 100% 1;
+        }
+    }
+
+    @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideDown {
+            from { transform: translateY(-100%); }
+            to { transform: translateY(0); }
+        }
+
+        @keyframes bounceIn {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-30px);
+            }
+            60% {
+                transform: translateY(-15px);
+            }
+        }
+
+        @keyframes slideUp {
+            from { transform: translateY(100%); }
+            to { transform: translateY(0); }
+        }
+
+        @keyframes slideIn {
+            from { transform: translateX(-100%); }
+            to { transform: translateX(0); }
+        }
+
+        @keyframes fadeInUp {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        @keyframes fadeInDown {
+            from { transform: translateY(-20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        @keyframes zoomIn {
+            from { transform: scale(0.8); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+        /* Media Queries */
+        @media (max-width: 768px) {
+            main {
+                padding: 20px;
+            }
+        }
+
+        /* Custom Selectors */
+        select[multiple] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f1f1f1;
+            box-sizing: border-box;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        select[multiple] option {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f1f1f1;
+            box-sizing: border-box;
+            margin-right: 10px;
+        }
+
+        /* Flexbox and Grid Layouts with Media Queries */
+       .flex-container {
+        display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        @media (max-width: 768px) {
+           .flex-container {
+                flex-direction: column;
+            }
+        }
+        /* Grid Layout with Media Queries */
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+        @media (max-width: 768px) {
+           .grid-container {
+                grid-template-columns: 1fr;
+            }
+        }
+        /* Nested Tags with Media Queries */
+
+        .nested-parent.nested-child {
+            color: #ff4081;
+        }
+
+        /* Pseudo-classes and Pseudo-elements with Media Queries */
+
+        a:hover {
+            color: #ff4081;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="About.html">About</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+                <li><a href="privacy.html">Privacy Policy</a></li>
+                <li><a href="Terms.html">Terms of Service</a></li>
+                <li><a href="BestSellingProducts.html">Best Selling Products</a></li>
+                <li><a href="CollaborativeFiltering.html">Collaborative Filtering</a></li>
+                <li><a href="ContentBasedFiltering.html">Content-Based Filtering</a></li>
+                <!-- Add more links as needed -->
+            </ul>
+        </nav>
+    </header>
+    <main role="main" class="container">
+        <h1>Best Selling Products</h1>
+        <p>Discover our best selling products curated just for you.</p>
+        <figure>
+            <div class="image" style="background-image: url('Firefly AI-Driven E-commerce Recommendation System specifically for fashion named as RecommenDiva_Ob (2).jpg');"></div>
+        </figure>
+
+        <!-- Product Cards -->
+        <div class="flex-container">
+            <div class="card">
+                <img src='WhatsApp Image 2024-08-03 at 20.26.35_8e8e1517.jpg' alt="Product 1">
+                <h2>Product 1</h2>
+                <p>This is a brief description of Product 1.</p>
+            </div>
+            <div class="card">
+                <img src='WhatsApp Image 2024-08-03 at 20.35.02_9da27c1c.jpg' alt="Product 2">
+                <h2>Product 2</h2>
+                <p>This is a brief description of Product 2.</p>
+            </div>
+            <div class="card">
+                <img src='WhatsApp Image 2024-08-03 at 20.26.42_878d4f93.jpg' alt="Product 3">
+                <h2>Product 3</h2>
+                <p>This is a brief description of Product 3.</p>
+            </div>
+
+        <!-- Progress Bar -->
+        <div class="progress-bar mt-20">
+            <div>Loading...</div>
+        </div>
+
+        <!-- Nested Tags Example -->
+        <div class="nested-parent mt-20">
+            <p>This is a <span class="nested-child">nested</span> example.</p>
+        </div>
+    </main>
+    
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 RecommenDiva</p>
+    </footer>
+</body>
+</html>

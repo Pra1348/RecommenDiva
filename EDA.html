@@ -1,0 +1,200 @@
+﻿@page
+@model RecommenDiva.Pages.Recommendations.EDAModel
+@{
+    ViewData["Title"] = "Exploratory Data Analysis";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Information about exploratory data analysis on RecommenDiva." />
+    <meta name="keywords" content="RecommenDiva, exploratory data analysis, personalized recommendations" />
+    <title>@ViewData["Title"] - RecommenDiva</title>
+    <link rel="stylesheet" href="~/css/site.css" />
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #121212;
+            background-image: url('~/images/space-bg.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 15px 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+        }
+
+        header nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        header nav ul li {
+            margin: 0 20px;
+        }
+
+        header nav ul li a {
+            text-decoration: none;
+            color: #fff;
+            padding: 10px 20px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        header nav ul li a:hover {
+            background-color: #ff4081;
+            color: #121212;
+            border-radius: 5px;
+        }
+
+        main {
+            text-align: center;
+            padding: 80px 20px;
+            margin: 0 auto;
+            max-width: 960px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            overflow: auto;
+        }
+
+        main h1 {
+            font-size: 3em;
+            color: #ff4081;
+            margin-bottom: 20px;
+            animation: neon 1.5s ease-in-out infinite alternate;
+        }
+
+        main h2 {
+            font-size: 2em;
+            color: #4caf50;
+            margin-bottom: 10px;
+        }
+
+        main p {
+            font-size: 1.2em;
+            color: #fff;
+        }
+
+        footer {
+            background-color: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        .click-me {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 20px;
+            border: 2px solid #ff4081;
+            border-radius: 5px;
+            color: #ff4081;
+            background-color: transparent;
+            text-decoration: none;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .click-me:hover {
+            background-color: #ff4081;
+            color: #121212;
+        }
+
+        .moving-item {
+            width: 50px;
+            height: 50px;
+            background-color: #ff4081;
+            border-radius: 50%;
+            position: absolute;
+            animation: move 5s linear infinite;
+        }
+
+        @keyframes move {
+            0% {
+                top: 0;
+                left: 0;
+            }
+            25% {
+                top: 0;
+                left: 100%;
+            }
+            50% {
+                top: 100%;
+                left: 100%;
+            }
+            75% {
+                top: 100%;
+                left: 0;
+            }
+            100% {
+                top: 0;
+                left: 0;
+            }
+        }
+
+        @keyframes neon {
+            from {
+                text-shadow: 0 0 10px #ff4081, 0 0 20px #ff4081, 0 0 30px #ff4081, 0 0 40px #ff4081, 0 0 50px #ff4081, 0 0 60px #ff4081, 0 0 70px #ff4081;
+            }
+            to {
+                text-shadow: 0 0 20px #ff4081, 0 0 30px #ff4081, 0 0 40px #ff4081, 0 0 50px #ff4081, 0 0 60px #ff4081, 0 0 70px #ff4081, 0 0 80px #ff4081;
+            }
+        }
+
+        @media (max-width: 768px) {
+            header nav ul {
+                flex-direction: column;
+            }
+
+            header nav ul li {
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+                <li><a href="privacy.html">Privacy Policy</a></li>
+                <li><a href="Terms.html">Terms of Service</a></li>
+                <li><a href="BestSellingProducts.html">Best Selling Products</a></li>
+                <li><a href="CollaborativeFiltering.html">Collaborative Filtering</a></li>
+                <li><a href="ContentBasedFiltering.html">Content-Based Filtering</a></li>
+                <!-- Add more links as needed -->
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Exploratory Data Analysis</h1>
+        <p>Information about exploratory data analysis...</p>
+        <div>
+            <h2>EDA Results</h2>
+            <p>Number of Products: @Model.NumberOfProducts</p>
+            <p>Average Rating: @Model.AverageRating</p>
+            <p>Top Category: @Model.TopCategory</p>
+            <p>Top Products: @string.Join(", ", @Model.TopProducts)</p>
+            <img src="/images/category_distribution.png" alt="Category Distribution Chart" />
+        </div>
+        <a href="https://yourprojectsurl.com" class="click-me">Click Me</a>
+        <div class="moving-item"></div>
+    </main>
+    <footer>
+        <p>&copy; 2024 RecommenDiva</p>
+    </footer>
+</body>
+</html>

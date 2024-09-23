@@ -1,0 +1,570 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn more about RecommenDiva, our mission, and our team.">
+    <meta name="keywords" content="About RecommenDiva, personalized recommendations, AI recommendations, product recommendations, fashion, beauty, luxury, lifestyle">
+    <meta name="google-adsense-account" content="ca-pub-4029892796199286">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="About - RecommenDiva">
+    <meta property="og:description" content="Learn more about RecommenDiva, our mission, and our team.">
+    <meta property="og:image" content="Firefly Fashion Artificial Intelligence in the RecommenDiva project harnesses sophisticated algorith.jpg">
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="About - RecommenDiva">
+    <meta property="twitter:description" content="Learn more about RecommenDiva, our mission, and our team.">
+    <meta property="twitter:image" content="Firefly Fashion Artificial Intelligence in the RecommenDiva project harnesses sophisticated algorith.jpg">
+    <meta name="generator" content="Webflow">
+    <title>Home- RecommenDiva</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Favicon and Apple Icon -->
+    <link href="android-chrome-192x192.png" rel="shortcut icon" type="image/x-icon">
+    <link href="android-chrome-192x192.png" rel="apple-touch-icon">
+
+    <!-- Google Analytics -->
+    
+    <script type="text/javascript">
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+      gtag('config', 'G-GB7CPCZJVN');
+
+    </script>
+
+    <!-- GSAP and Lenis -->
+    
+    <script>
+      const lenis = new Lenis({
+        duration: 1.2,
+        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+        direction: 'vertical',
+        gestureDirection: 'vertical',
+        smooth: true,
+        mouseMultiplier: 1,
+        smoothTouch: false,
+        touchMultiplier: 2,
+        infinite: false,
+      });
+      function raf(time) {
+        lenis.raf(time);
+        requestAnimationFrame(raf);
+      }
+      requestAnimationFrame(raf);
+
+    </script>
+
+    <!-- Custom Styles -->
+    <style>
+        body {
+            background: linear-gradient(135deg, #840ae2, #09e5f1);
+            color: #e71919;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            justify-content: space-between;
+            align-items: center;
+
+        }
+        header {
+            background: rgba(168, 233, 14, 0.863);
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(243, 176, 8, 0.944);
+            position: sticky;
+            top: 0;
+            width: 100%;
+            border-top: 1px solid rgba(12, 128, 237, 0.9);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            align-items: center;
+
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: rgba(84, 246, 14, 0.958);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+        }
+        nav ul li {
+            float: left;
+            margin-right: 20px; 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            align-items: center;
+
+
+        }
+        nav ul li a {
+            display: block;
+            color: #ff4081;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+            border-radius: 10px;
+            font-size: 18px;
+            font-weight: bold;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            cursor: pointer;
+
+        }
+        nav ul li a:hover {
+            background-color: rgba(251, 11, 159, 0.918);
+            border-radius: 10px;    
+            font-weight: bold;
+            font-size: 20px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            cursor: pointer;
+            
+            
+        }
+        p {
+            animation-duration: 3s;
+            animation-name: slidein;
+            }
+            p span {
+            display: inline-block;
+            animation-duration: 3s;
+            animation-name: growshrink;
+        }
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background: rgba(8, 174, 246, 0.952);
+            color: #ea1273;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            border-top: 1px solid rgba(9, 246, 207, 0.926);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            
+        }
+        .container {
+            margin: 20px auto;
+            padding: 20px;
+            max-width: 1200px;
+            background: rgba(7, 179, 226, 0.775);
+            border-radius: 10px;
+            border: 1px solid rgba(8, 47, 220, 0.86);
+            box-shadow: 0 0 20px rgba(14, 230, 133, 0.832);
+            animation: fadein 1s ease-in-out;
+            animation-timing-function: ease-in-out;
+            animation-delay: 2s;
+            animation-fill-mode: forwards;
+            animation-iteration-count: infinite;
+            animation-name: fadein;
+            
+        }
+        .scrollable {
+            max-height: 400px;
+            overflow-y: scroll;
+            scrollbar-color: #e41616 #e60aaf;
+            scrollbar-width: thin;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+
+        }
+        .moving-items {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 20px;
+            animation: move 10s linear infinite;
+
+        }
+        .moving-items div {
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            padding: 20px;
+            width: 150px;
+            text-align: center;
+            color: #ff4081;
+            transition: background-color 0.3s;
+            box-shadow: 0 0 10px rgba(255, 64, 129, 0.5);
+
+        }
+        .moving-items div:hover {
+            background-color: rgba(247, 96, 154, 0.845);
+            box-shadow: 0 0 10px rgba(255, 64, 129, 0.5);
+            font-weight: bold;
+            font-size: 18px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            cursor: pointer;
+
+        }
+        @keyframes slidein {
+        from {
+            translate: 150vw 0;
+            scale: 200% 1;
+        }
+
+        to {
+            translate: 0 0;
+            scale: 100% 1;
+        }
+        }
+
+        @keyframes growshrink {
+        25%,
+        75% {
+            scale: 100%;
+        }
+
+        50% {
+            scale: 200%;
+            color: magenta;
+        }
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        @keyframes move {
+            0% { transform: translateX(0); }
+            50% { transform: translateX(100px); }
+            100% { transform: translateX(0); }
+
+        }
+        .link-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: rgba(255, 255, 255, 0.2);
+            color: #ff4081;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            box-shadow: 0 0 10px rgba(255, 64, 129, 0.5);
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 18px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin-right: 10px;
+
+        }
+        .link-button:hover {
+            background-color: rgba(246, 71, 71, 0.919);
+            box-shadow: 0 0 10px rgba(255, 64, 129, 0.5);
+            font-weight: bold;
+            font-size: 20px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            cursor: pointer;
+
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            border: 2px solid #ff4081;
+            margin-bottom: 10px;
+            box-shadow: 0 0 10px rgba(255, 64, 129, 0.5);
+            cursor: pointer;
+
+        }
+        figure {
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            align-items: center;
+
+        }
+        figcaption {
+            color: #bbb;
+            font-size: 0.9em;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin-top: 10px;
+            text-decoration: none;
+            transition: color 0.3s;
+            cursor: pointer;
+
+        }
+
+        
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="About.html">About</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+                <li><a href="privacy.html">Privacy Policy</a></li>
+                <li><a href="Terms.html">Terms of Service</a></li>
+                <li><a href="BestSellingProducts.html">Best Selling Products</a></li>
+                <li><a href="CollaborativeFiltering.html">Collaborative Filtering</a></li>
+                <li><a href="ContentBasedFiltering.html">Content-Based Filtering</a></li>
+                <li><a href="CustomerDemographics.html">Customer Demographics</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            <div class="text-center">
+                <h1 class="display-4">Welcome to RecommenDiva</h1>
+                <p>Get the best product recommendations here!</p>
+                <figure>
+                    <img src="WhatsApp Image 2024-08-03 at 20.28.10_c04180fc.jpg" alt="Home Page Banner" >
+                    <figcaption>Discover personalized recommendations on RecommenDiva</figcaption>
+                </figure>
+                <section class="additional-content">
+                    <h2>Why Choose Us?</h2>
+                    <p>At RecommenDiva, we believe in providing personalized recommendations tailored to your needs.</p>
+                    <ul>
+                        <li>Fashion & Apparel</li>
+                        <li>Beauty & Personal Care</li>
+                        <li>Luxury & Lifestyle</li>
+                        <li>Jewelry & Watches</li>
+                        <li>Gifts & Specialty Items</li>
+                    </ul>
+                </section>
+                <div class="moving-items">
+                    <div>Fashion
+                        <a href="Fashion.html" class="link-button">View Fashion</a>
+                        <a href="Fashion.html" class="link-button">View More</a>
+                        <img src="WhatsApp Image 2024-08-03 at 20.35.02_9da27c1c.jpg" alt="Fashion Product" />
+                        <figcaption>Discover fashion products</figcaption>
+                        <figcaption>Discover beauty products</figcaption>
+                        <figcaption>Discover luxury products</figcaption>
+                        <figcaption>Discover jewelry and watches</figcaption>
+                        <figcaption>Discover gifts and specialty items</figcaption>
+                        <figcaption>Discover more products</figcaption>
+                    </div>
+                    <div>Beauty
+                        <a href="Beauty.html" class="link-button">View Beauty</a>
+                        <a href="Beauty.html" class="link-button">View More</a>
+                        <img src="WhatsApp Image 2024-08-03 at 20.35.02_0ae73c19.jpg" alt="Beauty Product" />
+                        <figcaption>Discover fashion products</figcaption>
+                        <figcaption>Discover beauty products</figcaption>
+                        <figcaption>Discover luxury products</figcaption>
+                        <figcaption>Discover jewelry and watches</figcaption>
+                        <figcaption>Discover gifts and specialty items</figcaption>
+                        <figcaption>Discover more products</figcaption>
+                    </div>
+                    <div>Lifestyle
+                        <a href="Lifestyle.html" class="link-button">View Lifestyle</a>
+                        <a href="Lifestyle.html" class="link-button">View More</a>
+                        <img src="WhatsApp Image 2024-08-03 at 20.35.01_263b913c.jpg" alt="Lifestyle Product" />
+                        <figcaption>Discover fashion products</figcaption>
+                        <figcaption>Discover beauty products</figcaption>
+                        <figcaption>Discover luxury products</figcaption>
+                        <figcaption>Discover jewelry and watches</figcaption>
+                        <figcaption>Discover gifts and specialty items</figcaption>
+                        <figcaption>Discover more products</figcaption>
+                    </div>
+                    <div>Jewelry
+                        <a href="Jewelry.html" class="link-button">View Jewelry</a>
+                        <a href="Jewelry.html" class="link-button">View More</a>
+                        <img src="WhatsApp Image 2024-08-03 at 20.26.35_8e8e1517.jpg" alt="Jewelry Product" />
+                        <figcaption>Discover fashion products</figcaption>
+                        <figcaption>Discover beauty products</figcaption>
+                        <figcaption>Discover luxury products</figcaption>
+                        <figcaption>Discover jewelry and watches</figcaption>
+                        <figcaption>Discover gifts and specialty items</figcaption>
+                        <figcaption>Discover more products</figcaption>
+                    </div>
+                    <div>Gifts  
+                        <a href="Gifts.html" class="link-button">View Gifts</a>
+                        <a href="Gifts.html" class="link-button">View More</a>
+                        <img src="WhatsApp Image 2024-08-03 at 20.35.01_263b913c.jpg" alt="Gifts Product" />
+                        <figcaption>Discover fashion products</figcaption>
+                        <figcaption>Discover beauty products</figcaption>
+                        <figcaption>Discover luxury products</figcaption>
+                        <figcaption>Discover jewelry and watches</figcaption>
+                        <figcaption>Discover gifts and specialty items</figcaption>
+                        <figcaption>Discover more products</figcaption>
+                    </div>
+                    <div>Specialty Items
+                        <a href="SpecialtyItems.html" class="link-button">View Specialty Items</a>
+                        <a href="SpecialtyItems.html" class="link-button">View More</a>
+                        <img src="WhatsApp Image 2024-08-03 at 20.35.02_9da27c1c.jpg" alt="Specialty Items Product" />
+                        <figcaption>Discover fashion products</figcaption>
+                        <figcaption>Discover beauty products</figcaption>
+                        <figcaption>Discover luxury products</figcaption>
+                        <figcaption>Discover jewelry and watches</figcaption>
+                        <figcaption>Discover gifts and specialty items</figcaption>
+                        <figcaption>Discover more products</figcaption>
+
+                    </div>
+                    <div>Fashion
+                        <a href="Fashion.html" class="link-button">View Fashion</a>
+                        <a href="Fashion.html" class="link-button">View More</a>
+                        <img src="WhatsApp Image 2024-08-03 at 20.26.42_878d4f93.jpg" alt="Fashion Product" />
+                        <figcaption>Discover fashion products</figcaption>
+                        <figcaption>Discover beauty products</figcaption>
+                        <figcaption>Discover luxury products</figcaption>
+                        <figcaption>Discover jewelry and watches</figcaption>
+                        <figcaption>Discover gifts and specialty items</figcaption>
+                        <figcaption>Discover more products</figcaption>
+                    </div>
+                    <div>Luxury
+                        <a href="Lifestyle.html" class="link-button">View Lifestyle</a>
+                        <a href="Lifestyle.html" class="link-button">View More</a>
+                        <img src="WhatsApp Image 2024-08-03 at 20.26.37_21f898de.jpg" alt="Lifestyle Product" />
+                        <figcaption>Discover fashion products</figcaption>
+                        <figcaption>Discover beauty products</figcaption>
+                        <figcaption>Discover luxury products</figcaption>
+                        <figcaption>Discover jewelry and watches</figcaption>
+                        <figcaption>Discover gifts and specialty items</figcaption>
+                        <figcaption>Discover more products</figcaption>                     
+                        <figcaption>Discover fashion products</figcaption>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <footer>
+        <p>&copy; 2024 RecommenDiva - <a href="privacy.html" style="color: #ff4081;">Privacy</a></p>
+    </footer>
+</body>
+</html>
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="RecommenDiva is a leading platform for personalized product recommendations." />
+    <meta name="keywords" content="RecommenDiva, personalized recommendations, AI recommendations, product recommendations, fashion, beauty, luxury, lifestyle" />
+    <title>@ViewData["Title"] - RecommenDiva</title>
+    <link rel="stylesheet" href='RecommenDiva\wwwroot\css\swagger-custom.css' >
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: #ffffff;
+        }
+
+        .navbar-brand {
+            color: #ff4081;
+            font-weight: bold;
+        }
+
+        .footer {
+            background-color: #2c2c2c;
+            padding: 1em;
+        }
+
+        .recommendations-page {
+            margin: 2em;
+            padding: 2em;
+            border: 2px solid #ff4081;
+            border-radius: 10px;
+            background: linear-gradient(135deg, #2c3e50 0%, #4ca1af 100%);
+        }
+
+        .recommendations-page h1 {
+            color: #ff4081;
+        }
+
+        .recommendations-page button {
+            padding: 0.5em 1em;
+            margin: 1em 0;
+            background-color: #ff4081;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .recommendations-page button:hover {
+            background-color: #ff79a1;
+        }
+
+        .recommendations-page ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .recommendations-page li {
+            margin: 0.5em 0;
+            padding: 0.5em;
+            background-color: #2c2c2c;
+            border: 1px solid #ff4081;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-light bg-dark border-bottom box-shadow mb-3">
+            <div class="container">
+                <a class="navbar-brand" asp-area="" asp-page="/Index">RecommenDiva</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-light" asp-area="" asp-page="/Index">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" asp-area="" asp-page="/About">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" asp-area="" asp-page="/Contact">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" asp-area="" asp-page="/Privacy">Privacy</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" asp-area="" asp-page="/Terms">Terms</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+        </main>
+    </div>
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2024 - RecommenDiva - <a asp-area="" asp-page="privacy.html">Privacy</a>
+        </div>
+    </footer>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="RecommenDiva is a leading platform for personalized product recommendations." />
+    <meta name="keywords" content="RecommenDiva, personalized recommendations, AI recommendations, product recommendations, fashion, beauty, luxury, lifestyle" />
+    <title>@ViewData["Title"] - RecommenDiva</title>
+    <link rel="stylesheet" href="RecommenDiva\wwwroot\css\swagger-custom.css" />
+    <script src="RecommenDiva\wwwroot\js\swagger-custom.js" defer></script>
+</head>
+<body>
+    <div class="content">
+        <main role="main" class="pb-3">
+        </main>
+    </div>
+</body>
+</html>
+
