@@ -433,11 +433,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\prach\\RecommenDiva\\RecommenDiva\\RecommenDiva.csproj",
+      "projectUniqueName": "C:\\Users\\prach\\OneDrive\\Desktop\\Website\\RecommenDiva\\RecommenDiva.csproj",
       "projectName": "RecommenDiva",
-      "projectPath": "C:\\Users\\prach\\RecommenDiva\\RecommenDiva\\RecommenDiva.csproj",
+      "projectPath": "C:\\Users\\prach\\OneDrive\\Desktop\\Website\\RecommenDiva\\RecommenDiva.csproj",
       "packagesPath": "C:\\Users\\prach\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\prach\\RecommenDiva\\RecommenDiva\\obj\\",
+      "outputPath": "C:\\Users\\prach\\OneDrive\\Desktop\\Website\\RecommenDiva\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\prach\\AppData\\Roaming\\NuGet\\NuGet.Config",
