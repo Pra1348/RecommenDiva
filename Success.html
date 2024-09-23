@@ -1,0 +1,309 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Form submission successful." />
+    <meta name="keywords" content="RecommenDiva, contact, success" />
+    <title>@ViewData["Title"] - RecommenDiva</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #1f0036 0%, #10001e 100%);
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        header {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 10px 0;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        header nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        header nav ul li {
+            margin: 0 15px;
+        }
+
+        header nav ul li a {
+            text-decoration: none;
+            color: #ffffff;
+            padding: 10px 20px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        header nav ul li a:hover {
+            background-color: #8a2be2;
+            border-radius: 5px;
+            transform: scale(1.1);
+        }
+
+        main {
+            text-align: center;
+            padding: 120px 20px 50px;
+            position: relative;
+        }
+
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background: rgba(0, 0, 0, 0.8);
+            box-shadow: 0 -1px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        footer .footer-links {
+            margin-top: 10px;
+        }
+
+        footer .footer-links a {
+            margin: 0 10px;
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        footer .footer-links a:hover {
+            text-decoration: underline;
+        }
+
+        .success-image {
+            width: 100px;
+            height: 100px;
+            margin-bottom: 20px;
+            animation: spin 20s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .moving-items {
+            display: flex;
+            justify-content: space-around;
+            padding: 20px 0;
+            overflow: hidden;
+        }
+
+        .moving-item {
+            width: 200px;
+            height: 200px;
+            background-color: rgba(138, 43, 226, 0.7);
+            margin: 0 10px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: move 10s linear infinite;
+            color: #fff;
+            font-size: 1.5em;
+        }
+
+        @keyframes move {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(100%); }
+        }
+
+        .scrollable-content {
+            max-height: 300px;
+            overflow-y: auto;
+            margin: 20px 0;
+        }
+
+        .project-link {
+            display: inline-block;
+            margin: 20px 0;
+            padding: 10px 20px;
+            background-color: #8a2be2;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .project-link:hover {
+            background-color: #7a1ab2;
+            transform: scale(1.1);
+        }
+
+        .footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #1f1f1f;
+            border-top: 1px solid #e4e4e4;
+            box-shadow: 0 -1px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .footer-links {
+            margin-top: 10px;
+        }
+
+        .footer-links a {
+            margin: 0 10px;
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+                <li><a href="privacy.html">Privacy Policy</a></li>
+                <li><a href="Terms.html">Terms of Service</a></li>
+                <li><a href="BestSellingProducts.html">Best Selling Products</a></li>
+                <li><a href="CollaborativeFiltering.html">Collaborative Filtering</a></li>
+                <li><a href="ContentBasedFiltering.html">Content-Based Filtering</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="container">
+        <h1>Success</h1>
+        <img src="android-chrome-192x192.png" alt="Success" class="success-image" />
+        <p>Your form has been submitted successfully. Thank you for getting in touch with us!</p>
+        <p><a href="Index3.html">Go back to home page</a></p>
+        <div class="moving-items">
+            <div class="moving-item">AI</div>
+            <div class="moving-item">Fashion</div>
+            <div class="moving-item">Beauty</div>
+            <div class="moving-item">Luxury</div>
+        </div>
+        <div class="scrollable-content">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum. Cras venenatis euismod malesuada. Nullam ac magna ac justo pharetra pellentesque. Fusce laoreet nulla vel turpis suscipit, nec commodo augue condimentum. Quisque non libero ut turpis convallis convallis. Mauris et ligula consequat, scelerisque leo a, tincidunt risus. Curabitur ultricies enim vel nulla sollicitudin, non venenatis nunc bibendum.</p>
+            <p>Curabitur tincidunt mi sed quam aliquet, in mollis elit tempus. Cras at feugiat nulla. Praesent pulvinar, quam sit amet pellentesque luctus, eros dolor tincidunt turpis, a pellentesque felis lorem at leo. Proin a ante eget justo fermentum mollis sit amet vel tortor. Aenean ut ipsum ultricies, hendrerit metus at, venenatis ex. Integer consequat malesuada libero, in tincidunt lorem cursus non. Etiam blandit nunc vel metus fermentum, quis consectetur quam suscipit.</p>
+            <p>Etiam eget lacus in nisi accumsan egestas. Nulla convallis vestibulum neque et pharetra. Praesent vehicula tortor vitae neque convallis, et sodales sem ullamcorper. Mauris ut orci eget dui elementum ultrices. Maecenas tincidunt orci quis metus dictum, ut venenatis nulla fermentum. Sed eu odio fermentum, volutpat mi non, aliquet arcu. Donec sed nisl consectetur, suscipit magna vel, laoreet nulla. Fusce euismod semper quam, nec egestas eros consectetur in.</p>
+        </div>
+        <a href="/Projects" class="project-link">Click Me</a>
+    </main>
+    <footer class="footer">
+        <p>&copy; 2024 RecommenDiva</p>
+        <div class="footer-links">
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="Terms.html">Terms of Service</a>
+        </div>
+    </footer>
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="RecommenDiva is a leading platform for personalized product recommendations." />
+    <meta name="keywords" content="RecommenDiva, personalized recommendations, AI recommendations, product recommendations, fashion, beauty, luxury, lifestyle" />
+    <title>@ViewData["Title"] - RecommenDiva</title>
+    <link rel="stylesheet" href="style.css  " />
+    <style>
+        /* Internal CSS */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(to bottom, #1a2a6c, #b21f1f, #fdbb2d);
+            color: white;
+            overflow-x: hidden;
+        }
+        .navbar {
+            background: rgba(0, 0, 0, 0.8);
+            border-bottom: 1px solid #ff4081;
+        }
+        .navbar-brand, .nav-link {
+            color: #ff4081 !important;
+        }
+        .footer {
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 1em;
+            color: #ff4081;
+            text-align: center;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            color: #ff4081;
+        }
+        .content {
+            padding: 2em;
+            margin: 0 auto;
+            max-width: 1200px;
+        }
+        .button-link {
+            display: inline-block;
+            background: #ff4081;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            text-decoration: none;
+            transition: background 0.3s ease-in-out;
+        }
+        .button-link:hover {
+            background: #e60073;
+        }
+        /* Animation */
+        .floating {
+            animation: float 3s ease-in-out infinite;
+        }
+        @keyframes float {
+            0% { transform: translatey(0px); }
+            50% { transform: translatey(-20px); }
+            100% { transform: translatey(0px); }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm">
+            <div class="container">
+                <a class="navbar-brand" asp-area="" asp-page="Index3.html">RecommenDiva</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item"><a class="nav-link" asp-area="" asp-page="/Index">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" asp-area="" asp-page="/About">About</a></li>
+                        <li class="nav-item"><a class="nav-link" asp-area="" asp-page="/Contact">Contact</a></li>
+                        <li class="nav-item"><a class="nav-link" asp-area="" asp-page="/Privacy">Privacy</a></li>
+                        <li class="nav-item"><a class="nav-link" asp-area="" asp-page="/Terms">Terms</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="content">
+        <main role="main" class="pb-3">
+        </main>
+    </div>
+    <footer class="footer">
+        <div class="container">
+            &copy; 2024 - RecommenDiva - <a asp-area="" asp-page="privacy.html" class="text-light">Privacy</a>
+        </div>
+    </footer>
+</body>
+</html>

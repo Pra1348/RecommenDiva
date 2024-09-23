@@ -1,0 +1,153 @@
+﻿@page
+@model RecommenDiva.Pages.Recommendations.UpsellingCrossSellingModel
+@{
+    ViewData["Title"] = "Upselling and Cross-Selling";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Information about upselling and cross-selling on RecommenDiva." />
+    <meta name="keywords" content="RecommenDiva, upselling, cross-selling, personalized recommendations" />
+    <title>@ViewData["Title"] - RecommenDiva</title>
+    <link rel="stylesheet" href="~/css/site.css" />
+    <style>
+        body {
+            background-color: #1a1a1a;
+            color: #e0e0e0;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: #333;
+            padding: 10px 0;
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        nav ul li {
+            float: left;
+            margin-right: 20px;
+        }
+        nav ul li a {
+            display: block;
+            color: #e0e0e0;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+        nav ul li a:hover {
+            background-color: #575757;
+        }
+        main {
+            padding: 20px;
+            margin: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+        }
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background: #333;
+            color: #e0e0e0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .scrollable {
+            max-height: 400px;
+            overflow-y: scroll;
+            scrollbar-color: #888 #333;
+            scrollbar-width: thin;
+        }
+        .moving-items {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 20px;
+            animation: move 10s linear infinite;
+        }
+        .moving-items div {
+            background-color: #444;
+            border-radius: 10px;
+            padding: 20px;
+            width: 150px;
+            text-align: center;
+            color: #fff;
+            transition: background-color 0.3s;
+        }
+        .moving-items div:hover {
+            background-color: #575757;
+        }
+        @keyframes move {
+            0% { transform: translateX(0); }
+            50% { transform: translateX(100px); }
+            100% { transform: translateX(0); }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+                <li><a href="privacy.html">Privacy Policy</a></li>
+                <li><a href="Terms.html">Terms of Service</a></li>
+                <li><a href="/Recommendations/BestSellingProducts">Best Selling Products</a></li>
+                <li><a href="CollaborativeFiltering.html">Collaborative Filtering</a></li>
+                <li><a href="ContentBasedFiltering.html">Content-Based Filtering</a></li>
+                <li><a href="CustomerDemographics.html">Customer Demographics</a></li>
+                <li><a href="/Recommendations/UpsellingCrossSelling">Upselling and Cross-Selling</a></li>
+                <!-- Add more links as needed -->
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Upselling and Cross-Selling</h1>
+        <section>
+            <p>Information about upselling and cross-selling...</p>
+            <h2>Key Strategies</h2>
+            <ul>
+                <li>Upselling: Offering a higher-end product to increase sales value</li>
+                <li>Cross-Selling: Suggesting complementary products</li>
+            </ul>
+            <h2>Example</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Strategy</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Upselling</td>
+                        <td>Recommending a premium version of a product</td>
+                    </tr>
+                    <tr>
+                        <td>Cross-Selling</td>
+                        <td>Suggesting accessories that go with a purchased item</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <div class="moving-items">
+            <div>Item 1</div>
+            <div>Item 2</div>
+            <div>Item 3</div>
+        </div>
+        <a href="https://github.com/yourusername/yourproject" target="_blank" style="display: inline-block; padding: 10px 20px; background-color: #444; color: #e0e0e0; text-decoration: none; border-radius: 5px; transition: background-color 0.3s;">Click me</a>
+    </main>
+    <footer>
+        <p>&copy; 2024 RecommenDiva</p>
+    </footer>
+</body>
+</html>

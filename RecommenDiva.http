@@ -1,0 +1,6 @@
+@RecommenDiva_HostAddress = http://localhost:5039
+
+GET {{RecommenDiva_HostAddress}}/BeFashionSta/
+Accept: application/json
+
+###

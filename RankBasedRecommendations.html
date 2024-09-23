@@ -1,0 +1,129 @@
+﻿@page
+@model RecommenDiva.Pages.Recommendations.RankBasedRecommendationsModel
+@{
+    ViewData["Title"] = "Rank-Based Recommendations";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Information about rank-based recommendations on RecommenDiva." />
+    <meta name="keywords" content="RecommenDiva, rank-based recommendations, personalized recommendations" />
+    <title>@ViewData["Title"] - RecommenDiva</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+        body {
+            background-color: #1a1a1a;
+            color: #e0e0e0;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: #333;
+            padding: 10px 0;
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        nav ul li {
+            float: left;
+            margin-right: 20px;
+        }
+        nav ul li a {
+            display: block;
+            color: #e0e0e0;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+        nav ul li a:hover {
+            background-color: #575757;
+        }
+        main {
+            padding: 20px;
+            margin: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+        }
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background: #333;
+            color: #e0e0e0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .scrollable {
+            max-height: 400px;
+            overflow-y: scroll;
+            scrollbar-color: #888 #333;
+            scrollbar-width: thin;
+        }
+        .moving-items {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 20px;
+            animation: move 10s linear infinite;
+        }
+        .moving-items div {
+            background-color: #444;
+            border-radius: 10px;
+            padding: 20px;
+            width: 150px;
+            text-align: center;
+            color: #fff;
+            transition: background-color 0.3s;
+        }
+        .moving-items div:hover {
+            background-color: #575757;
+        }
+        @keyframes move {
+            0% { transform: translateX(0); }
+            50% { transform: translateX(100px); }
+            100% { transform: translateX(0); }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+                <li><a href="privacy.html">Privacy Policy</a></li>
+                <li><a href="Terms.html">Terms of Service</a></li>
+                <li><a href="BestSellingProducts.html">Best Selling Products</a></li>
+                <li><a href="/Recommendations/CollaborativeFiltering">Collaborative Filtering</a></li>
+                <li><a href="/Recommendations/ContentBasedFiltering">Content-Based Filtering</a></li>
+                <!-- Add more links as needed -->
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Rank-Based Recommendations</h1>
+        <div class="scrollable">
+            <p>Information about rank-based recommendations...</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin luctus, quam non vestibulum sollicitudin, ex elit facilisis libero, nec ultrices sem magna a eros. Nam nec magna sed felis efficitur auctor in sit amet arcu. Cras non erat vel leo fringilla dignissim. Donec gravida auctor augue, non convallis arcu.</p>
+            <p>Curabitur sit amet lacus id velit dignissim hendrerit. Aliquam erat volutpat. Nulla facilisi. Pellentesque auctor, felis non fermentum fermentum, lectus nunc bibendum eros, non bibendum libero libero id lorem.</p>
+        </div>
+        <div class="moving-items">
+            <div>Item 1</div>
+            <div>Item 2</div>
+            <div>Item 3</div>
+        </div>
+        <a href="https://github.com/yourusername/yourproject" target="_blank" style="display: inline-block; padding: 10px 20px; background-color: #444; color: #e0e0e0; text-decoration: none; border-radius: 5px; transition: background-color 0.3s;">Click me</a>
+    </main>
+    <footer>
+        <p>&copy; 2024 RecommenDiva</p>
+    </footer>
+</body>
+</html>
